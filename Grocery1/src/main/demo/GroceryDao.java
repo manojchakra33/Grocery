@@ -37,4 +37,11 @@ public class GroceryDao {
 		
 	
 	}
+	public Category deleteCategory(String name) {
+		Category c=categoryRepo.findByCategoryName(name);
+	    categoryRepo.deleteById(c.getCategoryId());
+		return c;
+	   
+	}
+}
 }
