@@ -76,11 +76,24 @@ public class GroceryController {
 	}
 
 	
-	//Place order
+	// Place order
 	@PostMapping("placeOrder")
-	public ResponseEntity placeOrder(@RequestBody Orders orders) throws Exception {
-		Orders o = ordersRepo.save(orders);
-
+	public ResponseEntity placeOrder(@RequestBody Orders orders) {
+		Orders orderFinal=new Orders();
+		
+		List<Product> product=orders.getProduct();
+		List<Product> productFinal=new ArrayList<>();
+		for(Product p: product) {
+		  Product pr=  productRepo.findById(p.getProductId()).get();
+		  productFinal.add(pr);		  
+		}		
+		User user=orders.getUser();
+		User userFinal=userRepo.findById(user.getUserId()).get();
+		
+		orderFinal.setProduct(productFinal);
+		orderFinal.setUser(userFinal);
+		
+		Orders o = ordersRepo.save(orderFinal);
 		return new ResponseEntity(o, HttpStatus.OK);
 	}
 	
@@ -98,6 +111,8 @@ public class GroceryController {
 		return productRepo.findAllBycategory(c);
 		
 	}
+	
+	//Delete category by Admin
 	@DeleteMapping("delCategory/{CategoryName}")
 	public Category deleteByCategory(@PathVariable String CategoryName) {
 		Category c= groceryDao.deleteCategory(CategoryName);
