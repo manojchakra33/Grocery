@@ -126,6 +126,14 @@ public class GroceryController {
 	loginRepo.save(user.getLogin())	;
 	return userRepo.save(user);		
 	}
+	
+	//showing user by taking userid
+	@GetMapping("showUser/{userId}")
+	public User showall(@PathVariable int userId) {
+		
+		return userRepo.findById(userId).get();
+	}
+		
 		
 	
 
