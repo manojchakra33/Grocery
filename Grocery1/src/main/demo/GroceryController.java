@@ -98,6 +98,13 @@ public class GroceryController {
 		return productRepo.findAllBycategory(c);
 		
 	}
+	@DeleteMapping("delCategory/{CategoryName}")
+	public Category deleteByCategory(@PathVariable String CategoryName) {
+		Category c= groceryDao.deleteCategory(CategoryName);
+		return c;
+		
+	}
+		
 	
 
 }
