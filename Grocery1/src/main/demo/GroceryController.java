@@ -119,6 +119,13 @@ public class GroceryController {
 		return c;
 		
 	}
+	
+	//Update user details and Change Password
+	@PostMapping("updateUser")
+	public User updateUser(@RequestBody User user) {
+	loginRepo.save(user.getLogin())	;
+	return userRepo.save(user);		
+	}
 		
 	
 
