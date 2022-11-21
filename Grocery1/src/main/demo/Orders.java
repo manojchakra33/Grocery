@@ -28,7 +28,15 @@ public class Orders {
     @ManyToMany
 	private Set<User> user;
 	private int total_cost;
+	///
 	
 	
 }
 	
+
+
+
+
+
+
+
