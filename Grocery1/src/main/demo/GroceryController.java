@@ -38,21 +38,21 @@ public class GroceryController {
 	@Autowired
 	GroceryDao groceryDao;
     
-	//Resgister new User
-	@PutMapping("regUser")
-	public ResponseEntity regUser(@RequestBody User user) {
+	// Resgister new User
+	@PostMapping("regUser")
+	public ResponseEntity<String> regUser(@RequestBody User user) {
 
-		Login login = user.getLogin();		
-		Boolean flag=groceryDao.findUserId(login.getUserName());
-		if(flag) {	
+		Login login = user.getLogin();
+		Boolean flag = groceryDao.findUserId(login.getUserName());
+		if (flag) {
+			
 			loginRepo.save(login);
 			userRepo.save(user);
-			return new ResponseEntity(user, HttpStatus.OK);
+			return new ResponseEntity("true", HttpStatus.OK);
 		}
-		return new ResponseEntity("username already taken", HttpStatus.OK);
-		
-	}
+		return new ResponseEntity("false", HttpStatus.OK);
 
+	}
 	
 	//Register new Category by Admin
 	@PutMapping("regCategory/{category}")
