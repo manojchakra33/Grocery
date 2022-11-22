@@ -92,6 +92,7 @@ public class GroceryController {
 		
 		orderFinal.setProduct(productFinal);
 		orderFinal.setUser(userFinal);
+		orderFinal.setTotal_cost(orders.getTotal_cost());
 		
 		Orders o = ordersRepo.save(orderFinal);
 		return new ResponseEntity(o, HttpStatus.OK);
