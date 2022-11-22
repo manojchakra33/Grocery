@@ -134,6 +134,19 @@ public class GroceryController {
 		
 		return userRepo.findById(userId).get();
 	}
+	
+	
+	// update category by Admin
+	@PostMapping("updateCategory")
+	public Category deleteCategory(@RequestBody Category category) {
+		return categoryRepo.save(category);
+	}
+	
+	//update products by Admin
+	@PostMapping("updateProduct")
+	public Product updateProduct(@RequestBody Product product) {
+		return productRepo.save(product);
+	}
 		
 		
 	
