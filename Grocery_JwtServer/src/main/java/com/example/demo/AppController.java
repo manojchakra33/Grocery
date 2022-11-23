@@ -43,13 +43,16 @@ public class AppController {
 			System.out.println("helloooo "+decode.getSubject());
 			if(decode.getSubject()==null){
 				System.out.println("subject is null");
-				return new ResponseEntity("customer", HttpStatus.ACCEPTED);
+			Response r =new Response();
+				r.setRole("customer");
+				return new ResponseEntity(r, HttpStatus.ACCEPTED);
+				
+				
 			}
 			
-
-			return new ResponseEntity("admin", HttpStatus.ACCEPTED);
-			
-			
+			Response r =new Response();
+			r.setRole("admin");
+			return new ResponseEntity(r, HttpStatus.ACCEPTED);	
 		
 			
 		} catch (Exception e) {
