@@ -1,0 +1,87 @@
+--------Insert user-------
+
+    Important conditions:
+    mobile number is 10 digit only, and unique,
+    username is unique only.
+
+{
+    "name": "gillchrist",
+        "mobileNumber": 9433543315,
+            "address": {
+                "addressLine1": "no 23",
+                    "addressLine2": "2nd street",
+                        "city": "perambur",
+                            "state": "tamilnadu",
+                                "country": "india",
+                                    "zipCode": "160056"
+    },
+    "login": {
+        "userName": "kaushik9",
+            "password": 12345,
+                "role": ""
+    }
+}
+
+
+
+
+
+
+----------insert product----------
+
+    {
+        "productName": "1kgApple",
+        "cost": 50,
+        "discount": 2,
+        "description": "imported from shimla",
+        "rating": 4,
+        "image": ""
+    }
+
+----------update userandchange password------------
+
+    {
+        "userId": 1,
+        "name": "gillchrist",
+        "mobileNumber": 9433543315,
+        "address": {
+            "addressLine1": "no 23",
+            "addressLine2": "2nd street",
+            "city": "perambur",
+            "state": "tamilnadu",
+            "country": "india",
+            "zipCode": "160056"
+        },
+        "login": {
+            "userName": "kaushik9",
+            "password": 12345,
+            "role": ""
+        }
+    }
+
+----------update product--------
+
+    {
+        "productId": 1,
+        "productName": "1kgApple",
+        "cost": 50,
+        "discount": 2,
+        "description": "imported from shimla",
+        "rating": 4,
+        "image": ""
+    }
+
+
+----------- place order------------
+
+    {
+        "product": [
+            {
+                "productId": 250
+            }
+        ],
+        "user": {
+            "userId": 1
+        },
+        "total_cost": 700
+    }
