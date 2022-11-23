@@ -68,7 +68,7 @@ public class AppController {
 		
 
 			Login l = loRepo.findById(user.getUsername()).get();
-			if (user.getUsername().equals(l.getUsername()) && user.getPassword().equals(l.getPassword())) {
+			if (user.getUsername().equals(l.getUserName()) && user.getPassword().equals(l.getPassword())) {
 
 				String token = JWT.create().withSubject(l.getRole())
 
