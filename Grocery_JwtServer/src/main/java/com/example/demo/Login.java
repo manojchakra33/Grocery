@@ -11,23 +11,18 @@ import javax.validation.constraints.Size;
 public class Login {
 
 	@Id
-	@NotBlank(message="username is mandatory")
-	@Column(name = "username", unique = true)
-	private String username;
-
-	@NotEmpty
-	@Size(min = 2, message = "password should have at least 2 characters")
+	private String UserName;
+	
 	private String password;
-	
-	
 	private String role;
 
-	public String getUsername() {
-		return username;
+
+	public String getUserName() {
+		return UserName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		UserName = userName;
 	}
 
 	public String getPassword() {
