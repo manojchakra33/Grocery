@@ -1,0 +1,11 @@
+<nav>
+    <!-- <button class="btn btn-success " > <a routerLink="/Payment" routerLinkActive="active">Payment</a></button><br><br>
+    <button class="btn btn-success " ><a routerLink="/Card" routerLinkActive="active">card</a></button><br><br>
+
+    <button class="btn btn-success " ><a routerLink="/Success" routerLinkActive="active">Success</a></button> <br><br>
+    -->
+    <app-payment *ngIf="paymentflag" (status)="paytype($event)"></app-payment>
+    <app-card *ngIf="cardflag" (status)="proceed($event)" ></app-card>
+    <app-success *ngIf="successflag"></app-success>
+</nav>
+<!-- <router-outlet></router-outlet> -->
