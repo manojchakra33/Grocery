@@ -1,0 +1,28 @@
+#aligning{
+   width: 70%;
+    margin-left: 58px;
+}
+
+#body{
+    position: relative;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 30%;
+    
+}
+
+#heading{
+    text-align: center;
+}
+
+#button{
+margin-left: 40%;
+}
+
+#bg{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}

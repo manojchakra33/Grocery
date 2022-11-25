@@ -1,0 +1,156 @@
+<div id="bg" style="background-image: url(https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGdyb2Nlcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);">
+<div id="body">
+    <h1 id="heading" class="text text-warning">Register</h1>
+    <form class ="form-group" #regform="ngForm" (ngSubmit)="register(regform)">
+       
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Name:</span>
+                <input id="name" required  type="text" [(ngModel)]="name"  name="ngModel" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" aria-required="true"/>
+                    
+            </div>
+
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+                <input type="number" [(ngModel)]="mobilenumber"  name="ngModel" id="mobilenumber" name="mobilenumber" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" aria-required="true" />
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Address Line1:</span>
+                <input type="text" [(ngModel)]="addressline1" name="ngModel" id="addressline1" name="addressline1" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" aria-required="true"/>
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Address Line 2:</span>
+                <input type="text" [(ngModel)]="addressline2"  name="ngModel" id="addressline2" name="addressline2" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" aria-required="true"/>
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">City:</span>
+                <input type="text" [(ngModel)]="city"  name="ngModel" id="city" name="city" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" />
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">State:</span>
+                        <input type="text" [(ngModel)]="state"  name="ngModel" id="state" name="state" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" />
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Country</label>
+                <select [(ngModel)]="country"  name="ngModel" name="country" class="form-select" id="inputGroupSelect01">
+                 
+                  <option value="india">India</option>
+                  <option value="italy">Italy</option>
+                  <option value="romania">Romania</option>
+                </select>
+              </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Zip Code:</span>
+                        <input type="text" [(ngModel)]="zipcode" id="zipcode"  name="zipcode" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" />
+            </div>
+
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+                        <input type="text" [(ngModel)]="username"  name="ngModel" id="username" name="username" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" />
+            </div>
+            <div id="aligning" class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+                        <input type="password" [(ngModel)]="password"  password ="ngModel" id="password" name="password" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" />
+            </div>
+
+
+            <input id="button" type="submit"  class="btn btn-outline-dark" value="submit">
+
+    </form>
+
+    <!-- <form class ="form-group" #regform="ngForm" (ngSubmit)="register(regform)">
+       
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name:</span>
+            <input id="name" required  type="text"  ngModel name="name"
+            #name="ngModel"  name="ngModel" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+        </div>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            <div *ngIf="name.errors?.['required']">
+               <p>Name is required.</p> 
+            </div>
+        </div>
+
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Mobile Number</span>
+            <input type="number" [(ngModel)]="mobilenumber"  name="ngModel" id="mobilenumber" name="mobilenumber" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Address Line1:</span>
+            <input type="text" [(ngModel)]="addressline1" name="ngModel" id="addressline1" name="addressline1" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Address Line 2:</span>
+            <input type="text" [(ngModel)]="addressline2"  name="ngModel" id="addressline2" name="addressline2" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">City:</span>
+            <input type="text" [(ngModel)]="city"  name="ngModel" id="city" name="city" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">State:</span>
+                    <input type="text" [(ngModel)]="state"  name="ngModel" id="state" name="state" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">Country</label>
+            <select [(ngModel)]="country"  name="ngModel" name="country" class="form-select" id="inputGroupSelect01">
+             
+              <option value="india">India</option>
+              <option value="italy">Italy</option>
+              <option value="romania">Romania</option>
+            </select>
+          </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Zip Code:</span>
+                    <input type="text" [(ngModel)]="zipcode" id="zipcode"  name="zipcode" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+                    <input type="text" [(ngModel)]="username"  name="ngModel" id="username" name="username" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" />
+        </div>
+        <div id="aligning" class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+                    <input type="password" [(ngModel)]="password"  password ="ngModel" id="password" name="password" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" />
+        </div>
+
+
+        <input id="button" type="submit"  class="btn btn-outline-dark" value="submit">
+
+</form> -->
+
+</div>
+</div>
