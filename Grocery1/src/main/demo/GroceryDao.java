@@ -43,5 +43,12 @@ public class GroceryDao {
 		return c;
 	   
 	}
-}
+	
+	public List<Orders> findOrders(int id){
+		User u=userRepo.findById(id).get();
+	  List<Orders> orders=ordersRepo.findByuser(u);
+	  return orders;
+		
+		
+	}
 }
