@@ -31,7 +31,7 @@ public class User {
 	
 	@NotNull
 	@Column(unique = true)
-	private int mobileNumber;
+	private Long mobileNumber;
 	
 	@Embedded
 	private Address address;
