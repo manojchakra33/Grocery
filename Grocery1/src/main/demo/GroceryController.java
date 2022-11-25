@@ -148,10 +148,11 @@ public class GroceryController {
 		return productRepo.save(product);
 	}
 	
-	//Show order by userId
-	@GetMapping("orderByUser/{userId}")
-	public List<Orders> showAllbyUserId(@PathVariable int userId){
-		return groceryDao.findOrders(userId);		
+	//get orders by userName
+	@GetMapping("orderByUser/{userName}")
+	public List<Orders> showAllbyUserId(@PathVariable String userName){
+		return groceryDao.findOrders(userName);
+		
 	}
 		
 		
