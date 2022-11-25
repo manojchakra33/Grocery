@@ -147,6 +147,12 @@ public class GroceryController {
 	public Product updateProduct(@RequestBody Product product) {
 		return productRepo.save(product);
 	}
+	
+	//Show order by userId
+	@GetMapping("orderByUser/{userId}")
+	public List<Orders> showAllbyUserId(@PathVariable int userId){
+		return groceryDao.findOrders(userId);		
+	}
 		
 		
 	
