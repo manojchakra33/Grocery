@@ -14,5 +14,8 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 //	  nativeQuery = true)
 //	void insertUser(@Param("city_village") String vity_village, @Param("district") String district, 
 //	  @Param("status") Integer status, @Param("email") String email,Param("email") String email,Param("email") String email);
+	
+	public User findBymobileNumber(Long number);
+	public User findBylogin(Login login);
 
 }
