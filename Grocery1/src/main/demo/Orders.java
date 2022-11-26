@@ -23,10 +23,10 @@ public class Orders {
 	@SequenceGenerator(name="seq",initialValue = 10000)
 	private int orderId;
     @ManyToMany
-	private Set<Product> product;
+	private List<Product> product;
 	private int quantity;
-    @ManyToMany
-	private Set<User> user;
+    @ManyToOne
+	private User user;
 	private int total_cost;
 	///
 	
