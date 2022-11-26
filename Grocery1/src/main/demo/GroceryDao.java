@@ -21,7 +21,7 @@ public class GroceryDao {
 			if (l.getUserName().equals(userName)) {
 				return false;
 			}
-			return true;
+			
 		}
 		return true;
 	}
