@@ -184,6 +184,16 @@ public class GroceryController {
 		  
 	}
 	
+	//17.search product by name
+	@GetMapping("getProductsByName/{name}")
+	public List<Product> getProductByName(@PathVariable String name) {
+		  return groceryDao.findProductsByName(name);
+		   
+	}
+	
+	
+	
+	
 	
 	
 	
