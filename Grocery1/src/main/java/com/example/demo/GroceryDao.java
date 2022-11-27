@@ -119,5 +119,18 @@ public class GroceryDao {
 		return orders;
 
 	}
+	
+	public List<Product> findProductsByName(String name){
+		   List<Product> products=productRepo.findAll();
+		   List<Product> sortedProductsByName=new ArrayList<>();
+		   
+		   for(Product p:products) {
+			   if(p.getProductName().toLowerCase().equals(name.toLowerCase())) {
+				   sortedProductsByName.add(p);
+			   }
+		   }
+		   return sortedProductsByName;
+	}
+
 
 }
