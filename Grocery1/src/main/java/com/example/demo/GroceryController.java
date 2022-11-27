@@ -176,6 +176,14 @@ public class GroceryController {
 		
 	}
 	
+	//16.cancel order by user
+	@DeleteMapping("cancelOrder/{orderId}")
+	public ResponseEntity delOrder(@PathVariable int orderId ) {
+		   ordersRepo.deleteById(orderId);
+		  return new ResponseEntity("cancelled",HttpStatus.OK);		  
+		  
+	}
+	
 	
 	
 	
