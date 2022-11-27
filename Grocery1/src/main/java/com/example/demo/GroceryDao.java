@@ -60,7 +60,9 @@ public class GroceryDao {
 		List<User> user = userRepo.findAll();
 		for (User u : user) {
 			if (u.getMobileNumber().equals(number)) {
+				if(string.length()<10 && string.length()>10) {
 				return false;
+				}
 			}
 		}
 		return true;
