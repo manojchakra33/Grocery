@@ -1,0 +1,14 @@
+<div class="count">
+<h5 style="color:black;" >COUNT:{{cout}}</h5><br> 
+     <div class="im" *ngFor="let e of pro">  
+            
+      <img src="{{e.image}}" alt="alt" width="100px" height="150px" ><br><br>
+       Name: {{e.productName}}<br>
+       Cost:{{e.cost}}<br>
+       Discount: {{e.discount}}<br>
+       Description:{{e.description}}<br>
+       Rating: {{e.rating}}<br>
+      <button class="btn btn-primary"(click)="add()" >Add to cart</button> 
+ </div> 
+</div>
+    

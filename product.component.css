@@ -1,0 +1,22 @@
+.im{
+   
+    display: inline-block;
+   /* width: 100px;
+   height: 250px; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+  margin-bottom: 15px;
+        transition: 0.3s ease-in-out;
+      }
+  
+   
+    .count{
+
+      color:brown;
+      font-family: cursive;
+      font-size: medium;
+      text-align: right;
+    }
