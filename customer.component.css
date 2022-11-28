@@ -1,0 +1,93 @@
+
+ h2{
+
+           margin-top: 0;
+            text-align: center;
+           height: 5px;
+          
+ }
+
+#grid{
+  display: inline-flex;
+  padding-top: 10%;
+}
+
+
+.img{
+  padding-right: 70px;
+}
+#grid2{
+  display: inline-flex;
+  padding-top: 10%;
+}
+#grid3{
+  display: inline-flex;
+  padding-top: 10%;
+}
+
+
+
+.color{
+  background-color:blue;
+  text-align: center;
+ 
+  color:black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url("https://thumbs.dreamstime.com/b/empty-wood-table-top-supermarket-grocery-store-blurred-defocused-background-bokeh-light-montage-product-display-153708475.jpg");
+}
+
+
+a{
+  text-decoration: none;
+  color:white;
+}
+a:hover{
+  color: burlywood;
+}
+
+h1 {
+  position:absolute;
+  padding-left: 50%;
+  padding-top: 10px;
+  color: white;
+  font-family:sans-serif;
+}
+#reg {
+  position: relative;
+  top:45px;
+  margin-left: 80%;
+  color: white;
+}
+
+p{
+  position: relative;
+  top:22px;
+  margin-left:93%;
+  color: white;
+
+}
+
+#searchbar {
+  margin-left: 40%;
+
+}
+
+#search{
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#align{
+  padding-right: 50px;
+}
+.cart{
+ 
+  text-align: right;
+}
+.pro{
+
+  font-family:cursive;
+  padding-left: 5px;
+}
+

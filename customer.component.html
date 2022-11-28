@@ -1,0 +1,35 @@
+<div class="color">
+  <h2> GRACIOUS  GLOBAL  MARKET</h2>
+
+  <div class="cart">
+    <button class="btn btn-primary">My Cart</button>
+  </div>
+
+
+  <div id="search" class="input-group mb-3">
+    <input type="text"  class="form-control" placeholder="Search products here" aria-label="search product"
+      aria-describedby="button-addon2">
+    <button class="btn btn-outline-info" type="button" id="button-addon2">Go</button>
+  </div>
+
+  <div>
+    <nav class="navbar" style="background-color:darkcyan; justify-content: center;">
+      <ul class="nav  justify-content-center">
+        <li class="nav-item">
+          <a id="align" style="font-size: 20px;" class="nav-link " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a id="align" style="font-size: 20px;" class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a id="align" style="font-size: 20px;" class="nav-link" href="#">Catgories</a>  
+        </li>
+      </ul>
+      
+    </nav>
+  </div>
+  <div *ngFor="let p of productList">
+    <app-product [pro]="p"></app-product>
+  </div>
+ 
+</div>
