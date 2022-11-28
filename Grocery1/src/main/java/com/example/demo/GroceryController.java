@@ -191,6 +191,39 @@ public class GroceryController {
 		   
 	}
 	
+	// 18.delete product from order
+	@PostMapping("delProductFromOrder/{orderId}/{productId}")
+	public Orders delProductFromOrder(@PathVariable int orderId, @PathVariable int productId) {
+		Orders o = ordersRepo.findById(orderId).get();
+		Orders o2 = new Orders();
+		List<Product> plist = o.getProduct();
+		List<Product> plist2 = new ArrayList<>();
+		for (Product p : plist) {
+			if (p.getProductId() != productId) {
+				plist2.add(p);
+			}
+		}
+		o2.setOrderId(orderId);
+		o2.setProduct(plist2);
+		o2.setUser(o.getUser());
+		ordersRepo.save(o2);
+		return o2;
+
+	}
+	
+	//19.update address by userId
+	@PutMapping("updateAddress/{userId}")
+	public ResponseEntity updateAddress(@PathVariable int userId,@RequestBody Address address) {
+		   User user=userRepo.findById(userId).get();
+		   user.setAddress(address);
+		  User u= userRepo.save(user);
+		   if(u==null) {
+		   return new ResponseEntity("false",HttpStatus.OK);
+		   }
+		   return new ResponseEntity("true",HttpStatus.OK);
+		   
+	}
+	
 	
 	
 	
