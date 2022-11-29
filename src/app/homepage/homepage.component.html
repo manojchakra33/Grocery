@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div >
+    <div id="bg">
+  <h1>Grocery</h1>
+
+  <div id="reg">
+    <a routerLink='register'>Register </a>/<a href="#"> Sign-In</a>
+  </div>
+  
+  <br>
+
+  <div id="search" class="input-group mb-3">
+    <input [(ngModel)]="search" type="text" class="form-control" placeholder="search product" aria-label="search product"
+      aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary" (click)="searchproductbyname()"  type="button" id="button-addon2">Search</button>
+  </div>
+
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img style="position: absolute;margin-top: -130px;margin-left: -20px;width: 8%;height: 11%;"
+        src="assets/images/logo_1.png" alt="logo" width="46" height="40">
+    </a>
+  </div>
+
+  <nav class="navbar" style="background-color: #32d600; justify-content: center;">
+    <ul class="nav  justify-content-center">
+      <li class="nav-item">
+        <a id="align" style="font-size: 20px;" class="nav-link "ariaCurrentWhenActive="page" routerLink='home' routerLinkActive="active" >Home</a>
+      </li>
+      <li class="nav-item">
+        <a id="align" style="font-size: 20px;" class="nav-link" routerLink='aboutus' >About Us</a>
+      </li>
+    
+      <li class="nav-item">
+        <div class="dropdown">
+        <a class="dropbtn" style="font-size: 20px;" class="nav-link" href="#">Catgories</a>
+        <div class="dropdown-content">
+          <a href="#">Vegetables & fruits</a>
+          <a href="#">Bakery</a>
+          <a href="#">Masala & Oils</a>
+          <a href="#">Hygiene</a>
+          <a href="#">Personal Care</a>
+          <a href="#">Food grains</a>
+          <a href="#">Dairy</a>
+          <a href="#">Snacks</a>
+          <a href="#">Home & kitchen</a>
+          <a href="#">Eggs & Meat</a>
+        </div>
+      </div>
+      </li>
+      
+    </ul>
+  </nav>
+</div>
+
+<div>
+<router-outlet ></router-outlet>
+<!--  -->
+</div>
+<!-- <br>
+<br> -->
+<div *ngFor="let p of product">
+  
+  <div>GET {{p.discount}}% OFF </div>
+  <img src="{{p.image}}" alt="img" />
+  <div><b>{{p.productName}}</b></div>
+  <br>
+  <div>Description: {{p.description}}</div>
+  <div>Cost: {{p.cost}}</div>
+  <div>Rating: {{p.rating}}</div>
+  
+  <button class="btn btn-primary" >Add to Cart</button>
+</div>
+
+ 
+  
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+          <i class="fab fa-facebook-f"></i></a>
+  
+        <!-- Twitter -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">GrociStore.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+<!--  -->
+
+
+
+
+
+
+
+
+

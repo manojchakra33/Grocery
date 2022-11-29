@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CardComponent } from './card/card.component';
-import { PaymentComponent } from './payment/payment.component';
-import { SuccessComponent } from './success/success.component';
+import { RouterModule, Routes ,} from '@angular/router';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
-  {path:'Card',component:CardComponent},
-  {path:'Payment',component:PaymentComponent},
-  {path:'Success',component:SuccessComponent}
+{path:'home',component:HomeComponent},
+  {path:"register",component:RegisterComponent},
+  {path:"aboutus",component:AboutusComponent},
 
 ];
 
@@ -16,4 +17,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents=[CardComponent,PaymentComponent,SuccessComponent]
