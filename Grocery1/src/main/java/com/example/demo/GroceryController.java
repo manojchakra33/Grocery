@@ -224,6 +224,41 @@ public class GroceryController {
 		   
 	}
 	
+	//20.AddToCart
+	@PutMapping("addToCart/{userName}/{productId}")
+	public String addToCart(@PathVariable String userName,@PathVariable int productId) {
+		
+		Login l=loginRepo.findById(userName).get();
+		User user=userRepo.findBylogin(l);
+		Cart cart=new Cart();
+		cart.setUserId(user.getUserId());
+		cart.setProduct(productId);
+		 Cart c= cartRepo.save(cart);
+		 if(c!=null) {
+		return "success";
+		}else {
+			return "failed";
+		} 
+  	
+	}
+	
+	  //21.GetCartByUserName
+    @GetMapping("getCartByUserName/{userName}")
+    public List<Cart> getCartByUserName(@PathVariable String userName){
+    	Login l=loginRepo.findById(userName).get();
+		User user=userRepo.findBylogin(l);
+		List<Cart> cartList=cartRepo.findAll();
+		List<Cart> cartByUser=new ArrayList<>();
+		
+		for(Cart c:cartList) {
+			if(user.getUserId()==c.getUserId()) {
+				cartByUser.add(c);
+			}
+		}
+		return cartByUser;
+		
+    }
+	
 	
 	
 	
