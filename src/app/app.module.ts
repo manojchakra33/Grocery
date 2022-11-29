@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomeComponent } from './home/home.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -24,7 +25,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

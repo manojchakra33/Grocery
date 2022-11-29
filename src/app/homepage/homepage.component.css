@@ -79,6 +79,11 @@ p{
     .dropdown:hover .dropdown-content {display: block;}
     .dropdown:hover .dropbtn {background-color: #3E8E41;}
 
+#imaging{
+  box-sizing: border-box;
+}
+
+
 footer {
     background-color: rgb(133, 0, 0);
     padding: 10px;

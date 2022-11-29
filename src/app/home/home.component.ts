@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UtilService } from '../util.service';
 import { Product } from 'src/product';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -37,12 +38,17 @@ export class HomeComponent implements OnInit {
 
   images = ["https://github.com/gilchrist01/imagesforslides/blob/main/slider_1.jpg?raw=true","https://github.com/gilchrist01/imagesforslides/blob/main/slider_2.jpg?raw=true", "https://github.com/gilchrist01/imagesforslides/blob/main/slider_3.jpg?raw=true", "https://github.com/gilchrist01/imagesforslides/blob/main/slider_4.jpg?raw=true", "https://github.com/gilchrist01/imagesforslides/blob/main/slider_5.jpg?raw=true"];
 
-	paused = false;
-	unpauseOnArrow = false;
-	pauseOnIndicator = false;
-	pauseOnHover = true;
-	pauseOnFocus = true;
 
+
+  
+
+
+
+
+
+
+
+  
   productlist:any=[];
 
   showingproduct()

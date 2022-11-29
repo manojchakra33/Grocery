@@ -1,69 +1,36 @@
 <div id="bg" style="background-image: url(https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTV8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);">
-<!-- <div >
-    <img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_1.jpg?raw=true" alt="slider_1">
-    <img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_2.jpg?raw=true" alt="slider_2">
-    <img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_3.jpg?raw=true" alt="slider_3">
-    <img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_4.jpg?raw=true" alt="slider_4">
-    <img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_5.jpg?raw=true" alt="slider_5">
-</div>
--->
 
-<!-- <div class="mall-slide">
-  <div class="slid-content">
-      <div class="mall-show-slide fade" *ngFor="let item of Imagedata;">
-          <img src="{{item}}" style="width:100%">
-      </div>
-      <div class="mall-carousel-ind">
-          <ul>
-              <li *ngFor="let item of Imagedata; let i = index;" [class.mall-this]="startIndex - 1 === i"></li>
-          </ul>
-      </div>
-  </div>
-</div> -->
 
-<ngb-carousel
-	#carousel
-	[interval]="1000"
-	[pauseOnHover]="pauseOnHover"
-	[pauseOnFocus]="pauseOnFocus"
-	(slide)="onSlide($event)"
->
-	<ng-template ngbSlide *ngFor="let img of images; index as i">
-		<div class="carousel-caption">
-			<h3>My slide {{i + 1}} title</h3>
+<ngb-carousel >
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_1.jpg?raw=true" alt="Random first slide" />
 		</div>
-		<a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
-			<div class="picsum-img-wrapper">
-				<img [src]="img" alt="My image {{i + 1}} description" />
-			</div>
-		</a>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_2.jpg?raw=true" alt="Random second slide" />
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_3.jpg?raw=true" alt="Random third slide" />
+		</div>
+	</ng-template>
+    <ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_4.jpg?raw=true" alt="Random fourth slide" />
+		</div>
+	</ng-template>
+    <ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img id="slider" src="https://github.com/gilchrist01/imagesforslides/blob/main/slider_5.jpg?raw=true" alt="Random fiveth slide" />
+		</div>
 	</ng-template>
 </ngb-carousel>
 
-<hr />
-
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
-	<label class="form-check-label" for="pauseOnHover">Pause on hover</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus" />
-	<label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow" />
-	<label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
-</div>
-<div class="form-check">
-	<input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator" />
-	<label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
-</div>
-<button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
-	{{paused ? 'Cycle' : 'Pause' }}
-</button>
-
-
-
+<br>
+<br>
 
 
 <div id="grid" >
